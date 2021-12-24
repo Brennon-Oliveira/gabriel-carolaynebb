@@ -1,0 +1,25 @@
+#Header {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem;
+}
+
+#Header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Header h1 .A {
+    color: var(--white);
+    font-size: 1.75rem;
+}
+
+#Header h1 .A:hover {
+    font-size: 2rem;
+}
+
+#Header nav ul {
+    display: flex;
+    gap: 1.5rem;
+}

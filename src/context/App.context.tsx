@@ -1,6 +1,9 @@
-import { createContext, ReactNode } from "react";
+import { createContext, ReactNode, useState } from "react";
 
-interface IAppContextData {}
+interface IAppContextData {
+    curRoute: string;
+    changeRoute: (route: string) => void;
+}
 
 interface IAppContextProps {
     children: ReactNode;
@@ -9,5 +12,20 @@ interface IAppContextProps {
 export const AppContext = createContext({} as IAppContextData);
 
 export function AppProvider({ children }: IAppContextProps) {
-    return <AppContext.Provider value={{}}>{children}</AppContext.Provider>;
+    const [curRoute, setCurRoute] = useState("home");
+
+    function changeRoute(route: string) {
+        setCurRoute(route);
+    }
+
+    return (
+        <AppContext.Provider
+            value={{
+                curRoute,
+                changeRoute,
+            }}
+        >
+            {children}
+        </AppContext.Provider>
+    );
 }
