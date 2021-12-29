@@ -11,3 +11,18 @@ body {
     height: 100%;
     background-color: var(--black);
 }
+
+h1,
+h2,
+h3,
+h4,
+a {
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+}
+
+p,
+span {
+    font-family: "Hind Siliguri";
+    font-weight: 300;
+}

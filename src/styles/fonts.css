@@ -1,0 +1,51 @@
+/* Exo */
+
+@font-face {
+    font-family: "Exo";
+    src: url("./../Assets/fonts/Exo/Exo-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Exo";
+    src: url("./../Assets/fonts/Exo/Exo-Light.ttf");
+    font-weight: 300;
+    font-style: lighter;
+    font-display: swap;
+}
+
+/* Hind Siliguri */
+
+@font-face {
+    font-family: "Hind Siliguri";
+    src: url("./../Assets/fonts/Hind_Siliguri/HindSiliguri-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Hind Siliguri";
+    src: url("./../Assets/fonts/Hind_Siliguri/HindSiliguri-Light.ttf");
+    font-weight: 300;
+    font-style: lighter;
+    font-display: swap;
+}
+
+/* Source Sans Pro */
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("./../Assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("./../Assets/fonts/Source_Sans_Pro/SourceSansPro-Light.ttf");
+    font-weight: 300;
+    font-style: lighter;
+    font-display: swap;
+}
