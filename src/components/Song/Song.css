@@ -1,158 +1,84 @@
+#Song.adjust {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: #ada9bb !important;
+}
+
+#Song button {
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: #0c0c0c;
+}
+
+#Song button.paused {
+    color: #3e8c78;
+}
+
+#Song .rangeContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#Song .audioTimer {
+    color: #0c0c0c;
+}
+
 /* Range */
 
-/* #Song .rangeContainer input {
-    width: 100%;
-    display: block;
-    position: relative;
-    z-index: 1;
-}
-
-#Song .rangeContainer .currentTime {
-    width: 100px;
-    height: 10px;
-    background-color: #276d75;
-    position: absolute;
-    z-index: 2;
-}
-
-#Song input[type="range"] {
-    width: 100%;
-    margin: 5px 0;
-    background-color: transparent;
-    -webkit-appearance: none;
-}
-#Song input[type="range"]:focus {
-    outline: none;
-}
-#Song input[type="range"]::-webkit-slider-runnable-track {
-    background: #0c0c0c;
-    border: 0;
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-}
-#Song input[type="range"]::-webkit-slider-thumb {
-    margin-top: -5px;
-    width: 20px;
-    height: 20px;
-    background: #3e8c78;
-    border: 0;
-    border-radius: 50px;
-    cursor: pointer;
-    -webkit-appearance: none;
-}
-#Song input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: #191919;
-}
-#Song input[type="range"]::-moz-range-track {
-    background: #0c0c0c;
-    border: 0;
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-}
-#Song input[type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #3e8c78;
-    border: 0;
-    border-radius: 50px;
-    cursor: pointer;
-}
-#Song input[type="range"]::-ms-track {
-    background: transparent;
-    border-color: transparent;
-    border-width: 5px 0;
-    color: transparent;
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-}
-#Song input[type="range"]::-ms-fill-lower {
-    background: #000000;
-    border: 0;
-}
-#Song input[type="range"]::-ms-fill-upper {
-    background: #0c0c0c;
-    border: 0;
-}
-#Song input[type="range"]::-ms-thumb {
-    width: 20px;
-    height: 20px;
-    background: #3e8c78;
-    border: 0;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-top: 0px;
-    position: relative;
-    z-index: 4;
-    /*Needed to keep the Edge thumb centred*/
-/* } */
-/* #Song input[type="range"]:focus::-ms-fill-lower {
-    background: #0c0c0c;
-}
-#Song input[type="range"]:focus::-ms-fill-upper {
-    background: #191919;
-}
-/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-  how to remove the virtical space around the range input in IE*/
-/* @supports (-ms-ime-align: auto) { */
-/* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-/* #Song input[type="range"] { */
-/* margin: 0; */
-/*Edge starts the margin from the thumb, not the track as other browsers do*/
-/* } */
-/* }  */
-
-input[type="range"] {
+#Song input[type="range"].currentTimeAudio {
     outline: 0;
     border: 0;
     border-radius: 500px;
-    width: 400px;
-    max-width: 100%;
-    margin: 24px 0 16px;
+    width: 100%;
+    max-width: 1280px;
     transition: box-shadow 0.2s ease-in-out;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    input[type="range"] {
-        /* overflow: hidden; */
-        height: 10px;
+    #Song input[type="range"].currentTimeAudio {
+        overflow: hidden;
+        height: 20px;
         -webkit-appearance: none;
-        background-color: #ddd;
+        background-color: rgb(43, 47, 49);
     }
-    input[type="range"]::-webkit-slider-runnable-track {
+    #Song input[type="range"].currentTimeAudio::-webkit-slider-runnable-track {
         height: 20px;
         -webkit-appearance: none;
         color: var(--black);
         /* // margin-top: -1px; */
         transition: box-shadow 0.2s ease-in-out;
     }
-    input[type="range"]::-webkit-slider-thumb {
+    #Song input[type="range"].currentTimeAudio::-webkit-slider-thumb {
         width: 20px;
         -webkit-appearance: none;
         height: 20px;
         cursor: ew-resize;
         background: #fff;
-        box-shadow: -340px 0 0 320px #276d75, inset 0 0 0 40px #3e8c78;
+        box-shadow: -700px 0 0 690px #276d75, inset 0 0 0 40px #3e8c78;
         border-radius: 50%;
         transition: box-shadow 0.2s ease-in-out;
-        /* position: relative; */
+        position: relative;
         /* // top: 1px; */
     }
-    input[type="range"]:active::-webkit-slider-thumb {
+    #Song input[type="range"].currentTimeAudio:active::-webkit-slider-thumb {
         background: #fff;
-        box-shadow: -340px 0 0 320px #1c585f, inset 0 0 0 3px #256353;
+        box-shadow: -700px 0 0 690px #1c585f, inset 0 0 0 3px #256353;
     }
 }
-input[type="range"]::-moz-range-progress {
+#Song input[type="range"].currentTimeAudio::-moz-range-progress {
     background-color: #43e5f7;
 }
-input[type="range"]::-moz-range-track {
+#Song input[type="range"].currentTimeAudio::-moz-range-track {
     background-color: #9a905d;
 }
-input[type="range"]::-ms-fill-lower {
+#Song input[type="range"].currentTimeAudio::-ms-fill-lower {
     background-color: #43e5f7;
 }
-input[type="range"]::-ms-fill-upper {
+#Song input[type="range"].currentTimeAudio::-ms-fill-upper {
     background-color: #9a905d;
 }

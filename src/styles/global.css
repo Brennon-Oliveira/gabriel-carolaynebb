@@ -19,10 +19,16 @@ h4,
 a {
     font-family: "Source Sans Pro";
     font-weight: 300;
+    color: var(--text-white);
 }
 
 p,
 span {
     font-family: "Hind Siliguri";
     font-weight: 300;
+    color: var(--text-white);
+}
+
+section {
+    padding: 60px 0;
 }
